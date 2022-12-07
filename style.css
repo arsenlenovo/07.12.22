@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 100px;
+}
+div {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  animation-name: background-change;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  
+  
+  
+}
+div:hover {
+  animation-play-state: paused;
+  
+}
+@keyframes background-change {
+
+  0% {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1);
+    box-sizing: 0;
+    box-shadow: none;
+  }
+  25% {
+  background-color: red;
+  margin-left: 50%;
+  
+  }
+  50% {
+    background-color: chartreuse;
+    transform: scale(.5);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  75% {
+    background-color: black;
+  }
+
+  
+  100% {
+    background-color: rgb(0, 8, 255);
+    transform: scale(2);
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px black, 10px 10px 20x 20px purple;
+  }
+}
+
+@keyframes rot {
+
+}
+ section {
+  position: relative;
+ }
+ section::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 10px;
+  background-color: brown;
+  transform-origin: 100%;
+ }
+ 
+
+
+
+
+
+
+.simple-spinner {
+  height: 100px;
+  width: 100px;
+  border: 105px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  border-top-color: rgb(89, 0, 255);
+  animation: rotate 1s 0s infinite linear  ;
+  margin-left: 150px;
+}
+@keyframes rotate {
+ 0% {
+  transform: rotate(3);
+ }    
+ 100% {
+  transform: rotate(360deg);
+  
+ }
+    
+
+}
